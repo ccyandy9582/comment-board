@@ -12,11 +12,9 @@ React.createContext({item: []})
 
 ReactDOM.render(
   <HashRouter>
-    <Container>
       <Header />
       {renderRoutes(routes)}
       <Footer />
-    </Container>
   </HashRouter>,
   document.getElementById("app")
 )

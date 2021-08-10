@@ -1,20 +1,26 @@
 import React, { useContext } from 'react';
-import { Col, Nav, NavItem, Row } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, Row, Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 export default function Header() {
 	return (
-		<Row>
-			<Col>
-				<Nav variant="tabs" defaultActiveKey="/">
-					<NavItem>
-						<NavLink to="/">Home</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink to="/blog">Blog</NavLink>
-					</NavItem>
-				</Nav>
-			</Col>
-		</Row>
+		<Navbar collapseOnSelect expand="lg" variant="light">
+			<Container>
+				<Navbar.Collapse id="responsive-navbar-nav">
+					<Nav variant="tabs" defaultActiveKey="/" className="mr-auto">
+						<NavItem>
+							<Nav.Link>
+								<NavLink to="/">Home</NavLink>
+							</Nav.Link>
+						</NavItem>
+						<NavItem>
+							<Nav.Link>
+								<NavLink to="/blog">Blog</NavLink>
+							</Nav.Link>
+						</NavItem>
+					</Nav>
+				</Navbar.Collapse>
+			</Container>
+		</Navbar>
 	);
 }

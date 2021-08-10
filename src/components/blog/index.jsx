@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Header from '../Header'
 
@@ -33,8 +33,8 @@ class Blog extends React.Component {
   }
   render() {
     return (
-      <div>
-        
+      <div style={{backgroundImage: `url('../blog_banner.jpg')`, height:`${400}px`, backgroundSize: 'cover'}}>
+        <h1>Blog</h1>
       </div>
     )
   }
